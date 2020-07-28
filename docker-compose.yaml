@@ -1,0 +1,22 @@
+version: "3.4"
+services:
+  # "devbox" to enable the developer to have a fully loaded development environment
+  devbox: &devbox
+    build:
+      dockerfile: "./docker/Dockerfile"
+      context: "."
+      args:
+        CENTOS_VERSION: "7.5.1804"
+        PYTHON_VERSION: "3.8.0"
+    image: "app/devbox"
+    entrypoint: /bin/bash
+    volumes:
+      - "./:/app"
+
+  fancy_devbox: &fancy_devbox
+    <<: *devbox
+    entrypoint: docker/entrypoints/entrypoint.sh
+
+  test:
+    <<: *fancy_devbox
+    command: "test --all"

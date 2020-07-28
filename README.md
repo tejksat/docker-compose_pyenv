@@ -2,7 +2,7 @@
 
 Choose `fancy_devbox` service and use the default for Python interpreter path:
 
-![](./Add Python Interpreter.png)
+![](/Add Python Interpreter.png)
 
 ## Notes
 * To explore `devbox` service:

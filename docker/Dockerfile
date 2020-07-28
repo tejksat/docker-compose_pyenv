@@ -20,4 +20,4 @@ WORKDIR /app
 
 RUN pip install -r requirements-test.txt
 
-USER 1000
+USER 1001

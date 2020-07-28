@@ -1,6 +1,7 @@
 ## Add Docker Compose Python Interpeter
 
 Choose `fancy_devbox` service and use the default for Python interpreter path:
+
 ![](Add Python Interpreter.png)
 
 ## Notes
